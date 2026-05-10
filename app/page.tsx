@@ -1,12 +1,6 @@
 import Image from "next/image";
-import { Lato } from "next/font/google";
+import { lato } from "./lib/fonts";
 import { CSSProperties } from "react";
-
-const lato = Lato({
-  subsets: ["latin"],
-  display: "swap",
-  weight: ["300", "400", "700", "900"]
-})
 
 const imageStyle: CSSProperties = {
   position: 'absolute',

@@ -20,7 +20,7 @@ export default function Header() {
                     alt="Tiny Library Logo"
                 />
             </Link>
-            <ul className="flex gap-10 text-sm uppercase">
+            <ul className="flex gap-10 text-sm uppercase text-[#606060]">
                 <li><Link href="/books">Books</Link></li>
                 <li><Link href="/about">About</Link></li>
             </ul>
