@@ -1,1 +1,22 @@
 @import "tailwindcss";
+
+:root {
+    --card-shadow: 
+        0px 4.74px 11.37px 0px #0000001A, 
+        0px 19.89px 19.89px 0px #00000017, 
+        0px 45.46px 27.47px 0px #0000000D, 
+        0px 80.5px 32.2px 0px #00000003, 
+        0px 125.97px 35.04px 0px #00000000;
+}
+
+@layer utilities {
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .no-scrollbar {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+}

@@ -16,7 +16,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${nunitoSans.className} max-w-[1440px] mx-auto`}
+        className={`${nunitoSans.className} max-w-screen md:max-w-[1440px] mx-auto`}
       >
         <Header />
         {children}
