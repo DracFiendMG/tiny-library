@@ -1,7 +1,12 @@
+"use client"
+
 import Image from "next/image"
 import Link from "next/link"
+import NavLink from "./NavLink"
+import { usePathname } from "next/navigation"
 
 export default function Header() {
+    const pathname = usePathname()
     return (
         <header className="flex justify-between items-center px-5 md:px-10 md:mb-10">
             <Link className="md:hidden" href="/">
@@ -20,9 +25,9 @@ export default function Header() {
                     alt="Tiny Library Logo"
                 />
             </Link>
-            <ul className="flex gap-10 text-sm uppercase text-[#606060]">
-                <li><Link href="/books">Books</Link></li>
-                <li><Link href="/about">About</Link></li>
+            <ul className="flex gap-10 text-sm uppercase">
+                <li><NavLink href="/books" isActive={pathname === "/books"}>Books</NavLink></li>
+                <li><NavLink href="/about" isActive={pathname === "/about"}>About</NavLink></li>
             </ul>
         </header>
     )

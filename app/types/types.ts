@@ -1,3 +1,5 @@
+import { ReactNode } from "react"
+
 export type Book = {
     id: number
     name: string
@@ -12,4 +14,10 @@ export type CategoryTypeProps = {
     params: Promise<{
         categoryName: string
     }>
+}
+
+export type NavLinkProps = {
+    href: string
+    children: ReactNode
+    isActive?: boolean
 }

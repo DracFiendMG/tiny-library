@@ -1,4 +1,3 @@
-import Filters from "../components/Filters"
 import BooksGrid from "../components/BooksGrid"
 
 export default async function Books() {
