@@ -1,0 +1,11 @@
+[
+  { "displayName": "Fiction", "slug": "fiction" },
+  { "displayName": "Non-Fiction", "slug": "non-fiction" },
+  { "displayName": "Romance", "slug": "romance" },
+  { "displayName": "Fantasy", "slug": "fantasy" },
+  { "displayName": "Thriller", "slug": "thriller" },
+  { "displayName": "Horror", "slug": "horror" },
+  { "displayName": "Historical", "slug": "historical" },
+  { "displayName": "Biography", "slug": "biography" },
+  { "displayName": "Self-Help", "slug": "self-help" }
+]

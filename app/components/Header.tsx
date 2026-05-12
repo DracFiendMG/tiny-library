@@ -26,7 +26,7 @@ export default function Header() {
                 />
             </Link>
             <ul className="flex gap-10 text-sm uppercase">
-                <li><NavLink href="/books" isActive={pathname === "/books"}>Books</NavLink></li>
+                <li><NavLink href="/books" isActive={pathname.startsWith("/books")}>Books</NavLink></li>
                 <li><NavLink href="/about" isActive={pathname === "/about"}>About</NavLink></li>
             </ul>
         </header>
