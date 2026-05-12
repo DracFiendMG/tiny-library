@@ -7,3 +7,9 @@ export type Book = {
     category: string
     dateAdded: string
 }
+
+export type CategoryTypeProps = {
+    params: Promise<{
+        categoryName: string
+    }>
+}
