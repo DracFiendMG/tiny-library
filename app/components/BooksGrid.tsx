@@ -6,9 +6,9 @@ import Image from "next/image"
 export default async function BooksGrid({ category }: Partial<{ category: string }>) {
     const books = await getAllBooks(category)
     return (
-        <div className="pt-[21px] flex flex-wrap justify-center md:justify-start my-10 gap-5 rounded-[10px] md:gap-10">
+        <div className="pt-[21px] flex flex-wrap items-start justify-center md:justify-start my-10 gap-5 rounded-[10px] md:gap-10">
             {books.map(book => {
-                return <div key={book.id} className="w-[362px] md:w-[267px] h-full text-[#1E1E1E] cursor-pointer rounded-[10px] md:hover:scale-105 md:hover:shadow-(--card-shadow) md:hover:shadow-black transition-transform duration-300">
+                return <div key={book.id} className="w-[362px] md:w-[267px] text-[#1E1E1E] cursor-pointer rounded-[10px] md:hover:scale-105 md:hover:shadow-(--card-shadow) md:hover:shadow-black transition-transform duration-300">
                     <div className="h-[362px] md:h-[267px] relative">
                         <Image src="/hero-image-square.png" fill alt={book.name} style={{ objectFit: 'cover', borderRadius: '10px 10px 0 0' }} />
                     </div>

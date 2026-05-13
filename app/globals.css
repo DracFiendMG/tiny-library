@@ -20,3 +20,13 @@
     scrollbar-width: none;  /* Firefox */
   }
 }
+
+.header {
+  border-bottom: 1px solid #F77429;
+}
+
+.filter {
+  border-left: 1px solid #F77429;
+  padding-left: 0.75rem;
+  transition: border-left-color 0.3s ease, padding-left 0.3s ease;
+}

@@ -9,9 +9,9 @@ export default function Filters() {
     const filters = getAllCategories()
     return (
         <nav className="
-                fixed
+                absolute
                 w-full
-                z-1000
+                z-999
                 bg-white
                 md:h-full
                 md:w-[140px]
@@ -33,7 +33,7 @@ export default function Filters() {
                 md:overflow-visible
                 md:[mask-image:none]
             ">
-                <NavLink href="/books" isActive={pathname === "/books"}>
+                <NavLink href="/books" isActive={pathname === "/books"} whoAmI="filter">
                     all
                 </NavLink>
                 {
@@ -42,6 +42,7 @@ export default function Filters() {
                                     key={filter} 
                                     href={filter === "all" ? '/books' : `/books/categories/${filter}`}
                                     isActive={pathname === `/books/categories/${filter}`}
+                                    whoAmI="filter"
                                 >{ filter }</NavLink>
                     })
                 }
