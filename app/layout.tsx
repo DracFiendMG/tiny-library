@@ -1,6 +1,10 @@
+"use client"
+
 import "./globals.css";
 import Header from "./components/Header";
 import { Nunito_Sans } from "next/font/google";
+import { usePathname } from "next/navigation";
+import { matchPathname } from "./lib/utility";
 
 const nunitoSans = Nunito_Sans({
   subsets: ["latin"],
@@ -13,12 +17,14 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const pathname = usePathname()
+  const isBookDetailPage = matchPathname(pathname)
   return (
     <html lang="en">
       <body
         className={`${nunitoSans.className} max-w-screen md:max-w-[1440px] mx-auto`}
       >
-        <Header />
+        { !isBookDetailPage && <Header /> }
         {children}
       </body>
     </html>

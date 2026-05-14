@@ -22,3 +22,9 @@ export type NavLinkProps = {
     isActive?: boolean
     whoAmI: string
 }
+
+export type BookDetailPageProps = {
+    params: Promise<{
+        id: number
+    }>
+}

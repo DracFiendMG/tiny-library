@@ -9,3 +9,7 @@ export async function getAllBooks(category: Partial<string | undefined>) {
 export async function getBooksCategory() {
     return ["all", ...new Set(booksData.map(book => book.category))]
 }
+
+export async function getBookDetails(id: number) {
+    return booksData.filter(book => book.id === id)[0]
+}

@@ -23,7 +23,7 @@ export default async function BooksGrid({ category }: Partial<{ category: string
                     </div>
                 </div>
             })}
-            <div className="fixed bottom-0 right-0 w-full h-[100px] md:h-[184px] pointer-events-none bg-gradient-to-t from-white to-transparent md:hidden" />
+            <div className="fixed bottom-0 right-0 w-full h-[100px] md:h-[184px] pointer-events-none bg-gradient-to-t from-white to-transparent" />
         </div>
     )
 }
