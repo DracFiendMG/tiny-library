@@ -3,11 +3,13 @@
 import { usePathname } from "next/navigation"
 import { getAllCategories } from "../lib/categories"
 import NavLink from "./NavLink"
+import { matchPathname } from "../lib/utility"
 
 export default function Filters() {
     const pathname = usePathname()
-    const filters = getAllCategories()
-    return (
+    const isBookDetailPage = matchPathname(pathname)
+    const filters = !isBookDetailPage && getAllCategories()
+    return (!isBookDetailPage &&
         <nav className="
                 absolute
                 w-full
