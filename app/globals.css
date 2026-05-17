@@ -20,6 +20,7 @@
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
   }
+
 }
 
 .header {
@@ -27,7 +28,14 @@
 }
 
 .filter {
-  border-left: 1px solid #F77429;
-  padding-left: 0.75rem;
-  transition: border-left 0.3s ease, padding-left 0.3s ease;
+  border-bottom: 1px solid #F77429;
+}
+
+@media (width >= 48rem) {
+  .filter {
+    border-bottom: none;
+    border-left: 1px solid #F77429;
+    padding-left: 0.75rem;
+    transition: border-left 0.3s ease, padding-left 0.3s ease;
+  }
 }

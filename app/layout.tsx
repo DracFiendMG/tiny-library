@@ -22,7 +22,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${nunitoSans.className} max-w-screen md:max-w-[1440px] mx-auto`}
+        className={`${nunitoSans.className} h-screen max-w-screen md:max-w-360 mx-auto`}
       >
         { !isBookDetailPage && <Header /> }
         {children}

@@ -8,7 +8,7 @@ import { matchPathname } from "../lib/utility"
 export default function Filters() {
     const pathname = usePathname()
     const isBookDetailPage = matchPathname(pathname)
-    const filters = !isBookDetailPage && getAllCategories()
+    const filters = !isBookDetailPage ? getAllCategories() : []
     return (!isBookDetailPage &&
         <nav className="
                 absolute
