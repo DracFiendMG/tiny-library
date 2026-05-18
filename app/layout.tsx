@@ -24,7 +24,13 @@ export default function RootLayout({
       <body
         className={`${nunitoSans.className} h-screen max-w-screen md:max-w-360 mx-auto`}
       >
-        { !isBookDetailPage && <Header /> }
+        {isBookDetailPage ? (
+          <div className="hidden md:block">
+            <Header />
+          </div>
+        ) : (
+          <Header />
+        )}
         {children}
       </body>
     </html>

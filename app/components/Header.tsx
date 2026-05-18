@@ -8,7 +8,7 @@ import { usePathname } from "next/navigation"
 export default function Header() {
     const pathname = usePathname()
     return (
-        <header className="flex justify-between items-center px-5 md:px-10 md:mb-10 fixed left-1/2 -translate-x-1/2 w-full max-w-screen md:max-w-[1440px] z-1000 bg-white">
+        <header className="flex justify-between items-center px-5 md:px-10 md:mb-10 fixed left-1/2 -translate-x-1/2 w-full max-w-screen md:max-w-360 z-1000 bg-white">
             <Link className="md:hidden" href="/">
                 <Image 
                     src="/tinylibrary-logo.png"

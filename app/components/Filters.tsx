@@ -8,17 +8,13 @@ import { matchPathname } from "../lib/utility"
 export default function Filters() {
     const pathname = usePathname()
     const isBookDetailPage = matchPathname(pathname)
-    const filters = !isBookDetailPage ? getAllCategories() : []
-    return (!isBookDetailPage &&
-        <nav className="
-                absolute
-                w-full
-                z-999
-                bg-white
-                md:h-full
-                md:w-[140px]
-                md:left-10
-        ">
+    const filters = getAllCategories()
+    return (
+        <nav
+            className={`absolute w-full z-999 bg-white md:h-full md:w-35 md:left-10 ${
+                isBookDetailPage ? "hidden md:block" : ""
+            }`}
+        >
             <div className="
                 no-scrollbar 
                 uppercase 
@@ -29,11 +25,11 @@ export default function Filters() {
                 text-[14px] 
                 p-5 
                 text-[#606060] 
-                [mask-image:linear-gradient(to_right,transparent,white_5%,white_90%,transparent_100%)]
+                mask-[linear-gradient(to_right,transparent,white_5%,white_90%,transparent_100%)]
                 md:flex
                 md:flex-col
                 md:overflow-visible
-                md:[mask-image:none]
+                md:mask-none
             ">
                 <NavLink href="/books" isActive={pathname === "/books"} whoAmI="filter">
                     all
